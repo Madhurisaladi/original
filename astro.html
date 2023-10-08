@@ -1,36 +1,51 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>KALPANA
-</title> 
+    <title>Registration Form</title>
+    <link rel="stylesheet"
+    href="style.css"
+    <script src="js.js"</script></script>
 </head>
-<body style="background-color: silver;">
-<h1>KALPANA CHAWLA</h1>
-<h2>ASTRONAUT</h2>
+<body>
+    <h2>Registration Form</h2>
+    <form action="process_registration.php" method="POST" onsubmit="return validateForm()">
+        <label for="enter name">Name:</label>
+        <input type="enter text" id="name" name="name" required><br><br>
 
+        <label for="enter email">Email:</label>
+        <input type="enter email" id="email" name="email" required><br><br>
 
-<img src="https://wallpapercave.com/wp/wp6947598.jpg" width="500" height="400" border="5" align="center"/>
+        <label for="enter phone">Phone Number:</label>
+        <input type="enter tel" id="enter phone" name="enter phone" required><br><br>
 
+        <label for="enter password">password:</label>
+        <input type="enter password" id="enter password" name="enter password" required><br><br>
 
+        <label for="enter confirm password">confirm password:</label>
+        <input type="enter confirm password" id="enter confirm password" name="enter confirm password" required><br><br>
 
-<p><font face="Comic sans MS"><big><b><big>Kalpana Chawla</big></b>(17 March 1962 – 1 February 2003) was an Indian-born American astronaut and mechanical engineer who was the first woman of Indian origin to go to space.[3][4] She first flew on Space Shuttle Columbia in 1997 as a mission specialist and primary robotic arm operator.</big></font></p>
-<p><font face="Comic sans MS"><b><big> Kalpana</big></b><big> was born on 17 March 1962 in Karnal, Haryana. She completed her schooling from Tagore Baal Niketan Senior Secondary School, Karnal. She went to local flying clubs and watched planes with her father. Her date of birth was falsified by her family to 1 July 1961, to allow her to become eligible for the matriculation exam. After getting a Bachelor of Engineering degree in Aeronautical Engineering from Punjab Engineering College, India, she moved to the United States in 1982 and obtained a Master of Science degree in Aerospace Engineering from the University of Texas at Arlington in 1984.Chawla went on to earn a second Masters in 1986 and a PhD in aerospace engineering in 1988 from the University of Colorado Boulder.</big></font></p>
-<p><font face="Comic sans MS"><big> Chawla died on 1 February 2003, in the Space Shuttle Columbia disaster, along with the other six crew members, when Columbia disintegrated over Texas during re-entry into the Earth's atmosphere, shortly before it was scheduled to conclude its 28th mission, STS-107.[22] Her remains were identified along with those of the rest of the crew members and were cremated and scattered at Zion National Park in Utah in accordance with her wishes.[23]
+        <!-- Add more fields as needed -->
 
-</big></center></font></p>
-<p><font face="Comic sans MS"><big><ul>
-<li>The fourteenth contracted Northrop Grumman Cygnus spacecraft mission delivering supplies to the ISS was named the S.S. Kalpana Chawla after her.</li>
-<li>Asteroid 51826 Kalpana Chawla, one of seven named after the Columbia's crew</li>
-<li>The lunar crater Chawla is named after Kalpana Chawla.</li>
-<li>On 5 February 2003, the Prime Minister of India at the time, Atal Bihari Vajpayee, announced that a meteorological series of satellites, MetSat, was to be renamed "Kalpana 1". The first satellite of the series, "MetSat-1", launched by India on 12 September 2002, was renamed "Kalpana-1".</li>
-<li>74th Street in the "Little India" of Jackson Heights, Queens, New York City, New York, United States, has been renamed "Kalpana Chawla Way" in her honor.</li><br />
-In honor of her, a street was named Kalpana Chawla Street in Rayon Nagar in Sirumugai, a village in Coimbatore, Tamil Nadu, India.
-The Kalpana Chawla Award was instituted by the Government of Karnataka in 2004 to recognize young women scientists.
-</big></font></p>
-</center>
+        <input type="submit" value="Submit">
+    </form>
 
+    <script>
+        function validateForm() {
+            // Get the values from the form fields
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
 
+            // Perform validation checks
+            if (name === "" || email === "" || phone === "") {
+                alert("All fields must be filled out");
+                return false;
+            }
 
+            // You can add more specific validation here (e.g., email format)
 
+            return true;
+        }
+    </script>
 </body>
 </html>
